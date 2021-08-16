@@ -1,38 +1,40 @@
 <?php
 
 /**
- * This file is part of menatwork/contao-multicolumnwizard-bundle.
+ * This file is part of contao-community-alliance/contao-multicolumnwizard-bundle.
  *
- * (c) 2012-2019 MEN AT WORK.
+ * (c) 2021 The CCA team.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * This project is provided in good faith and hope to be usable by anyone.
  *
- * @package    menatwork/contao-multicolumnwizard-bundle
+ * @package    contao-community-alliance/contao-multicolumnwizard-bundle
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
  * @author     Stefan Heimes <stefan_heimes@hotmail.com>
+ * @author     Ingolf Steinhardt <info@e-spin.de>
  * @copyright  2011 Andreas Schempp
  * @copyright  2011 certo web & design GmbH
  * @copyright  2013-2019 MEN AT WORK
- * @license    https://github.com/menatwork/contao-multicolumnwizard-bundle/blob/master/LICENSE LGPL-3.0-or-later
+ * @copyright  2021 The CCA team.
+ * @license    https://spdx.org/licenses/LGPL-3.0-or-later.html LGPL-3.0-or-later
  * @filesource
  */
 
 use Contao\DataContainer;
 use Contao\Template;
-use MenAtWork\MultiColumnWizardBundle\EventListener\Contao\ExecutePostActions;
-use MenAtWork\MultiColumnWizardBundle\EventListener\Contao\InitializeSystem;
-use MenAtWork\MultiColumnWizardBundle\EventListener\Contao\LoadDataContainer;
-use MenAtWork\MultiColumnWizardBundle\EventListener\Contao\ParseTemplate;
-use MenAtWork\MultiColumnWizardBundle\Helper\MultiColumnWizardHelper as BundleMultiColumnWizardHelper;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\ExecutePostActions;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\InitializeSystem;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\LoadDataContainer;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\ParseTemplate;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\Helper\MultiColumnWizardHelper as BundleMultiColumnWizardHelper;
 
 /**
  * Class MultiColumnWizardHelper
  *
  * @deprecated Deprecated and will be removed in version 4. Use
- *             MenAtWork\MultiColumnWizardBundle\Helper\MultiColumnWizardHelper or the services.
+ *             ContaoCommunityAlliance\MultiColumnWizardBundle\Helper\MultiColumnWizardHelper or the services.
  */
 // @codingStandardsIgnoreStart
 class MultiColumnWizardHelper extends BundleMultiColumnWizardHelper
@@ -62,7 +64,7 @@ class MultiColumnWizardHelper extends BundleMultiColumnWizardHelper
      *
      * @return void
      *
-     * @deprecated Use the service MenAtWork\MultiColumnWizardBundle\EventListener\Contao\ParseTemplate
+     * @deprecated Use the service ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\ParseTemplate
      */
     public function addScriptsAndStyles(Template $objTemplate)
     {
@@ -78,7 +80,7 @@ class MultiColumnWizardHelper extends BundleMultiColumnWizardHelper
             E_USER_DEPRECATED
         );
 
-        /** @var MenAtWork\MultiColumnWizardBundle\EventListener\Contao\ParseTemplate $helper */
+        /** @var ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\ParseTemplate $helper */
         $helper = \System::getContainer()->get($serviceName);
         $helper->addScriptsAndStyles($objTemplate);
     }
@@ -90,7 +92,7 @@ class MultiColumnWizardHelper extends BundleMultiColumnWizardHelper
      *
      * @return void
      *
-     * @deprecated Use the service MenAtWork\MultiColumnWizardBundle\EventListener\Contao\LoadDataContainer
+     * @deprecated Use the service ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\LoadDataContainer
      */
     public function supportModalSelector($strTable)
     {
@@ -106,7 +108,7 @@ class MultiColumnWizardHelper extends BundleMultiColumnWizardHelper
             E_USER_DEPRECATED
         );
 
-        /** @var MenAtWork\MultiColumnWizardBundle\EventListener\Contao\LoadDataContainer $helper */
+        /** @var ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\LoadDataContainer $helper */
         $helper = \System::getContainer()->get($serviceName);
         $helper->supportModalSelector($strTable);
     }
@@ -116,7 +118,7 @@ class MultiColumnWizardHelper extends BundleMultiColumnWizardHelper
      *
      * @return void
      *
-     * @deprecated Use the service MenAtWork\MultiColumnWizardBundle\EventListener\Contao\InitializeSystem
+     * @deprecated Use the service ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\InitializeSystem
      */
     public function changeAjaxPostActions()
     {
@@ -132,7 +134,7 @@ class MultiColumnWizardHelper extends BundleMultiColumnWizardHelper
             E_USER_DEPRECATED
         );
 
-        /** @var MenAtWork\MultiColumnWizardBundle\EventListener\Contao\InitializeSystem $helper */
+        /** @var ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\InitializeSystem $helper */
         $helper = \System::getContainer()->get($serviceName);
         $helper->changeAjaxPostActions();
     }
@@ -146,7 +148,7 @@ class MultiColumnWizardHelper extends BundleMultiColumnWizardHelper
      *
      * @return void
      *
-     * @deprecated Use the service MenAtWork\MultiColumnWizardBundle\EventListener\Contao\ExecutePostActions
+     * @deprecated Use the service ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\ExecutePostActions
      *
      * @throws \Exception
      */
@@ -164,7 +166,7 @@ class MultiColumnWizardHelper extends BundleMultiColumnWizardHelper
             E_USER_DEPRECATED
         );
 
-        /** @var MenAtWork\MultiColumnWizardBundle\EventListener\Contao\ExecutePostActions $helper */
+        /** @var ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\ExecutePostActions $helper */
         $helper = \System::getContainer()->get($serviceName);
         $helper->executePostActions($action, $container);
     }
@@ -176,7 +178,7 @@ class MultiColumnWizardHelper extends BundleMultiColumnWizardHelper
      *
      * @return string
      *
-     * @deprecated Use the \MenAtWork\MultiColumnWizardBundle\Helper\MultiColumnWizardHelper::mcwFilePicker
+     * @deprecated Use the \ContaoCommunityAlliance\MultiColumnWizardBundle\Helper\MultiColumnWizardHelper::mcwFilePicker
      */
     public function mcwFilePicker(DataContainer $container)
     {

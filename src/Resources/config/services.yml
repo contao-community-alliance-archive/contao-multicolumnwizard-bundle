@@ -1,14 +1,14 @@
 services:
-  MenAtWork\MultiColumnWizardBundle\EventListener\Contao\ExecutePostActions:
+  ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\ExecutePostActions:
     public: true
     arguments:
       - '@event_dispatcher'
 
-  MenAtWork\MultiColumnWizardBundle\EventListener\Contao\InitializeSystem:
+  ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\InitializeSystem:
     public: true
 
-  MenAtWork\MultiColumnWizardBundle\EventListener\Contao\LoadDataContainer:
+  ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\LoadDataContainer:
     public: true
 
-  MenAtWork\MultiColumnWizardBundle\EventListener\Contao\ParseTemplate:
+  ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao\ParseTemplate:
     public: true

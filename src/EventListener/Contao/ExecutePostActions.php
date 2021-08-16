@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of menatwork/contao-multicolumnwizard-bundle.
+ * This file is part of contao-community-alliance/contao-multicolumnwizard-bundle.
  *
  * (c) 2012-2020 MEN AT WORK.
  *
@@ -10,19 +10,20 @@
  *
  * This project is provided in good faith and hope to be usable by anyone.
  *
- * @package    menatwork/contao-multicolumnwizard-bundle
+ * @package    contao-community-alliance/contao-multicolumnwizard-bundle
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
  * @author     Julian Aziz Haslinger <me@aziz.wtf>
  * @author     Stefan Heimes <stefan_heimes@hotmail.com>
  * @author     Sven Baumann <baumann.sv@gmail.com>
+ * @author     Ingolf Steinhardt <info@e-spin.de>
  * @copyright  2011 Andreas Schempp
  * @copyright  2011 certo web & design GmbH
  * @copyright  2013-2020 MEN AT WORK
- * @license    https://github.com/menatwork/contao-multicolumnwizard-bundle/blob/master/LICENSE LGPL-3.0-or-later
+ * @license    https://spdx.org/licenses/LGPL-3.0-or-later.html LGPL-3.0-or-later
  * @filesource
  */
 
-namespace MenAtWork\MultiColumnWizardBundle\EventListener\Contao;
+namespace ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Contao;
 
 use Contao\Config;
 use Contao\CoreBundle\Exception\ResponseException;
@@ -43,9 +44,9 @@ use ContaoCommunityAlliance\DcGeneral\DC\General;
 use ContaoCommunityAlliance\DcGeneral\Exception\DcGeneralRuntimeException;
 use FilesModel;
 use FileTree;
-use MenAtWork\MultiColumnWizardBundle\Contao\Widgets\MultiColumnWizard;
-use MenAtWork\MultiColumnWizardBundle\Event\CreateWidgetEvent;
-use MenAtWork\MultiColumnWizardBundle\EventListener\BaseListener;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\Contao\Widgets\MultiColumnWizard;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\Event\CreateWidgetEvent;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\BaseListener;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
@@ -75,7 +76,7 @@ class ExecutePostActions extends BaseListener
 
     /**
      * Create a new row.
-     * Will call the event men-at-work.multi-column-wizard-bundle.create-widget to get the widget.
+     * Will call the event contao-community-alliance.multi-column-wizard-bundle.create-widget to get the widget.
      *
      * @param string        $action    The action.
      * @param DataContainer $container The current context.
@@ -166,7 +167,7 @@ class ExecutePostActions extends BaseListener
         $intId    = \Input::get('id');
         $strField = $this->getInputName($container);
         // Contao changed the name for FileTree and PageTree widgets
-        // @see https://github.com/menatwork/contao-multicolumnwizard-bundle/issues/51
+        // @see https://github.com/contao-community-alliance/contao-multicolumnwizard-bundle/issues/51
         $contaoVersion = VERSION . '.' . BUILD;
         $vNameCheck    = (version_compare($contaoVersion, '4.4.41', '>=') &&
                           version_compare($contaoVersion, '4.5.0', '<')) ||

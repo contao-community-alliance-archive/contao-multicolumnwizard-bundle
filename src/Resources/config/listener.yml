@@ -1,52 +1,52 @@
 services:
-  MenAtWork\MultiColumnWizardBundle\EventListener\DcGeneral\UpdateDataDefinition:
+  ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\DcGeneral\UpdateDataDefinition:
     tags:
       - name: kernel.event_listener
         event: dc-general.factory.build-data-definition
         method: addMcwFields
         priority: -5000
 
-  MenAtWork\MultiColumnWizardBundle\EventListener\Mcw\GetOptionsBridge:
+  ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Mcw\GetOptionsBridge:
     arguments:
       - '@event_dispatcher'
     tags:
       - name: kernel.event_listener
-        event: men-at-work.multi-column-wizard-bundle.get-options
+        event: contao-community-lliance.multi-column-wizard-bundle.get-options
         method: executeEvent
 
-  MenAtWork\MultiColumnWizardBundle\EventListener\Mcw\TinyMce:
+  ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Mcw\TinyMce:
     tags:
       - name: kernel.event_listener
-        event: men-at-work.multi-column-wizard-bundle.get-tiny-mce
+        event: contao-community-lliance.multi-column-wizard-bundle.get-tiny-mce
         method: executeEvent
 
-  MenAtWork\MultiColumnWizardBundle\EventListener\Mcw\DatePicker:
+  ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Mcw\DatePicker:
     tags:
       - name: kernel.event_listener
-        event: men-at-work.multi-column-wizard-bundle.get-date-picker
+        event: contao-community-lliance.multi-column-wizard-bundle.get-date-picker
         method: executeEvent
 
-  MenAtWork\MultiColumnWizardBundle\EventListener\Mcw\ColorPicker:
+  ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Mcw\ColorPicker:
     arguments:
       - '@=service(''contao.framework'').getAdapter(''Contao\\Image'')'
       - '@=service(''contao.framework'').getAdapter(''Contao\\StringUtil'')'
       - "@contao.translation.translator"
     tags:
       - name: kernel.event_listener
-        event: men-at-work.multi-column-wizard-bundle.get-color-picker
+        event: contao-community-lliance.multi-column-wizard-bundle.get-color-picker
         method: executeEvent
 
-  MenAtWork\MultiColumnWizardBundle\EventListener\Mcw\DcaPickerWizard:
+  ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Mcw\DcaPickerWizard:
     tags:
       - name: kernel.event_listener
-        event: men-at-work.multi-column-wizard-bundle.get-dca-picker-wizard
+        event: contao-community-lliance.multi-column-wizard-bundle.get-dca-picker-wizard
         method: executeEvent
 
-  MenAtWork\MultiColumnWizardBundle\EventListener\Mcw\CreateWidget:
+  ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Mcw\CreateWidget:
     tags:
       - name: kernel.event_listener
-        event: men-at-work.multi-column-wizard-bundle.create-widget
+        event: contao-community-lliance.multi-column-wizard-bundle.create-widget
         method: createWidgetContao
       - name: kernel.event_listener
-        event: men-at-work.multi-column-wizard-bundle.create-widget
+        event: contao-community-lliance.multi-column-wizard-bundle.create-widget
         method: createWidgetDcGeneral

@@ -1,16 +1,16 @@
 <?php
 
 /**
- * This file is part of menatwork/contao-multicolumnwizard-bundle.
+ * This file is part of contao-community-alliance/contao-multicolumnwizard-bundle.
  *
- * (c) 2012-2019 MEN AT WORK.
+ * (c) 2021 The CCA team.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * This project is provided in good faith and hope to be usable by anyone.
  *
- * @package    menatwork/contao-multicolumnwizard-bundle
+ * @package    contao-community-alliance/contao-multicolumnwizard-bundle
  * @author     Alexander Menk <alex.menk@gmail.com>
  * @author     Andreas Isaak <info@andreas-isaak.de>
  * @author     Andreas Schempp <andreas.schempp@terminal42.ch>
@@ -27,14 +27,15 @@
  * @copyright  2011 Andreas Schempp
  * @copyright  2011 certo web & design GmbH
  * @copyright  2013-2019 MEN AT WORK
- * @license    https://github.com/menatwork/contao-multicolumnwizard-bundle/blob/master/LICENSE LGPL-3.0-or-later
+ * @copyright  2021 The CCA team.
+ * @license    https://spdx.org/licenses/LGPL-3.0-or-later.html LGPL-3.0-or-later
  * @filesource
  */
 
-namespace MenAtWork\MultiColumnWizardBundle\Helper;
+namespace ContaoCommunityAlliance\MultiColumnWizardBundle\Helper;
 
 use Contao\DataContainer;
-use MenAtWork\MultiColumnWizardBundle\Event\GetDcaPickerWizardStringEvent;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\Event\GetDcaPickerWizardStringEvent;
 
 /**
  * Class MultiColumnWizardHelper
