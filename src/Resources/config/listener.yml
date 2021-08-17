@@ -1,5 +1,6 @@
 services:
   ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\DcGeneral\UpdateDataDefinition:
+    public: true
     tags:
       - name: kernel.event_listener
         event: dc-general.factory.build-data-definition
@@ -7,6 +8,7 @@ services:
         priority: -5000
 
   ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Mcw\GetOptionsBridge:
+    public: true
     arguments:
       - '@event_dispatcher'
     tags:
@@ -15,18 +17,21 @@ services:
         method: executeEvent
 
   ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Mcw\TinyMce:
+    public: true
     tags:
       - name: kernel.event_listener
         event: contao-community-lliance.multi-column-wizard-bundle.get-tiny-mce
         method: executeEvent
 
   ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Mcw\DatePicker:
+    public: true
     tags:
       - name: kernel.event_listener
         event: contao-community-lliance.multi-column-wizard-bundle.get-date-picker
         method: executeEvent
 
   ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Mcw\ColorPicker:
+    public: true
     arguments:
       - '@=service(''contao.framework'').getAdapter(''Contao\\Image'')'
       - '@=service(''contao.framework'').getAdapter(''Contao\\StringUtil'')'
@@ -37,12 +42,14 @@ services:
         method: executeEvent
 
   ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Mcw\DcaPickerWizard:
+    public: true
     tags:
       - name: kernel.event_listener
         event: contao-community-lliance.multi-column-wizard-bundle.get-dca-picker-wizard
         method: executeEvent
 
   ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Mcw\CreateWidget:
+    public: true
     tags:
       - name: kernel.event_listener
         event: contao-community-lliance.multi-column-wizard-bundle.create-widget
