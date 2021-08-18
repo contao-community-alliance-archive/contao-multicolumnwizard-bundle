@@ -1,26 +1,31 @@
-[![Build Status](https://travis-ci.org/menatwork/contao-multicolumnwizard-bundle.png)](https://travis-ci.org/menatwork/contao-multicolumnwizard-bundle)
-[![Latest Version tagged](http://img.shields.io/github/tag/menatwork/contao-multicolumnwizard-bundle.svg)](https://github.com/menatwork/contao-multicolumnwizard-bundle/tags)
-[![Latest Version on Packagist](http://img.shields.io/packagist/v/menatwork/contao-multicolumnwizard-bundle.svg)](https://packagist.org/packages/menatwork/contao-multicolumnwizard-bundle)
-[![Installations via composer per month](http://img.shields.io/packagist/dm/menatwork/contao-multicolumnwizard-bundle.svg)](https://packagist.org/packages/menatwork/contao-multicolumnwizard-bundle)
+[![Build Status](https://github.com/contao-community-alliance/contao-multicolumnwizard-bundle/actions/workflows/diagnostics.yml/badge.svg)](https://github.com/contao-community-alliance/contao-multicolumnwizard-bundle/actions)
+[![Latest Version tagged](http://img.shields.io/github/tag/contao-community-alliance/contao-multicolumnwizard-bundle.svg)](https://github.com/contao-community-alliance/contao-multicolumnwizard-bundle/tags)
+[![Latest Version on Packagist](http://img.shields.io/packagist/v/contao-community-alliance/contao-multicolumnwizard-bundle.svg)](https://packagist.org/packages/contao-community-alliance/contao-multicolumnwizard-bundle)
+[![Installations via composer per month](http://img.shields.io/packagist/dm/contao-community-alliance/contao-multicolumnwizard-bundle.svg)](https://packagist.org/packages/contao-community-alliance/contao-multicolumnwizard-bundle)
 
 # MultiColumnWizard
 
-The MultiColumnWizard is a widget for mapping several fields of the same and/or different type (input type) in a DCA element. The individual fields of the MCW are listed column by column in the backend and can be extended row by row as a group. The arrangement corresponds to a multidimensional array of the form array[rows][fields], which is stored in the database as a serialized array. The widget is almost identical to MultiTextWizard or MultiSelectWizard. It extends the functionality of any widget.
+The MultiColumnWizard (MCW) is a widget for mapping several fields of the same and/or different type (input type)
+in a DCA element. The individual fields of the MCW are listed column by column in the backend and can be extended
+row by row as a group. The arrangement corresponds to a multidimensional array of the form array[rows][fields],
+which is stored in the database as a serialized array. The widget is almost identical to MultiTextWizard or
+MultiSelectWizard. It extends the functionality of any widget.
 
 More information can be found in the contao wiki
 http://de.contaowiki.org/MultiColumnWizard
 
 ## Install
 
-The Multicolumnwizard is usually installed via an extension. If it is necessary to install Multicolumnwizard yourself, please use the console with the composer via the call
+The MultiColumnWizard is usually installed via an extension. If it is necessary to install MultiColumnWizard yourself,
+please use the console with the composer via the call
 
-`composer require menatwork/contao-multicolumnwizard-bundle`
+`composer require contao-community-alliance/contao-multicolumnwizard-bundle`
 
 or
 
-`web/contao-manager.phar.php composer require menatwork/contao-multicolumnwizard-bundle`
+`web/contao-manager.phar.php composer require contao-community-alliance/contao-multicolumnwizard-bundle`
 
-Developers should add the Multicolumnwizard to their `composer.json` as a dependent package.
+Developers should add the MultiColumnWizard to their `composer.json` as a dependent package.
 
 ## Usages
 
@@ -62,7 +67,6 @@ $GLOBALS['TL_DCA']['tl_theme']['fields']['templateSelection'] = [
 ?>
 ```
 
-
 ### Usage with callback
 
 ```php
@@ -81,7 +85,6 @@ $GLOBALS['TL_DCA']['tl_table']['fields']['anything'] = [
 
 ?>
 ```
-
 
 ### Disable Drag and Drop
 
@@ -145,3 +148,8 @@ $GLOBALS['TL_DCA']['tl_theme']['fields']['templateSelection'] = [
 
 ?>
 ```
+
+## Acknowledgement
+
+Thanks to the previous developers - especially to MAN AT WORK GmbH for the maintenance so far.
+

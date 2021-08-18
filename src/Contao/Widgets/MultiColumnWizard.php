@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of menatwork/contao-multicolumnwizard-bundle.
+ * This file is part of contao-community-alliance/contao-multicolumnwizard-bundle.
  *
  * (c) 2012-2021 MEN AT WORK.
  *
@@ -10,7 +10,7 @@
  *
  * This project is provided in good faith and hope to be usable by anyone.
  *
- * @package    menatwork/contao-multicolumnwizard-bundle
+ * @package    contao-community-alliance/contao-multicolumnwizard-bundle
  * @author     Andreas Burg <info@andreasburg.de>
  * @author     Andreas Isaak <info@andreas-isaak.de>
  * @author     Andreas Schempp <andreas.schempp@terminal42.ch>
@@ -40,15 +40,15 @@
  * @author     Andreas Dziemba <adziemba@web.de>
  * @author     Fritz Michael Gschwantner <fmg@inspiredminds.at>
  * @author     doishub <daniele@oveleon.de>
- * @author     info@e-spin.de <info@e-spin.de>
  * @copyright  2011 Andreas Schempp
  * @copyright  2011 certo web & design GmbH
  * @copyright  2013-2021 MEN AT WORK
- * @license    https://github.com/menatwork/contao-multicolumnwizard-bundle/blob/master/LICENSE LGPL-3.0-or-later
+ * @copyright  2021 The CCA team.
+ * @license    https://spdx.org/licenses/LGPL-3.0-or-later.html LGPL-3.0-or-later
  * @filesource
  */
 
-namespace MenAtWork\MultiColumnWizardBundle\Contao\Widgets;
+namespace ContaoCommunityAlliance\MultiColumnWizardBundle\Contao\Widgets;
 
 use Contao\BackendTemplate;
 use Contao\Date;
@@ -57,11 +57,11 @@ use Contao\Input;
 use Contao\StringUtil;
 use Contao\Widget;
 use ContaoCommunityAlliance\DcGeneral\EnvironmentInterface;
-use MenAtWork\MultiColumnWizardBundle\Event\GetColorPickerStringEvent;
-use MenAtWork\MultiColumnWizardBundle\Event\GetDatePickerStringEvent;
-use MenAtWork\MultiColumnWizardBundle\Event\GetOptionsEvent;
-use MenAtWork\MultiColumnWizardBundle\Event\GetTinyMceStringEvent;
-use MenAtWork\MultiColumnWizardBundle\Event\GetDcaPickerWizardStringEvent;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\Event\GetColorPickerStringEvent;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\Event\GetDatePickerStringEvent;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\Event\GetOptionsEvent;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\Event\GetTinyMceStringEvent;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\Event\GetDcaPickerWizardStringEvent;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 /**
@@ -368,7 +368,7 @@ class MultiColumnWizard extends Widget
     }
 
     /**
-     * Trigger the event men-at-work.multi-column-wizard-bundle.get-tiny-mce
+     * Trigger the event contao-community-alliance.multi-column-wizard-bundle.get-tiny-mce
      * Try to get help for generating the TinyMceScript.
      *
      * @param string $fieldId            The id of the field.
@@ -399,7 +399,7 @@ class MultiColumnWizard extends Widget
     }
 
     /**
-     * Trigger the event men-at-work.multi-column-wizard-bundle.get-date-picker
+     * Trigger the event contao-community-alliance.multi-column-wizard-bundle.get-date-picker
      *
      * @param string $fieldId            The id of the field.
      *
@@ -454,7 +454,7 @@ class MultiColumnWizard extends Widget
     }
 
     /**
-     * Trigger the event men-at-work.multi-column-wizard-bundle.get-color-picker
+     * Trigger the event contao-community-alliance.multi-column-wizard-bundle.get-color-picker
      *
      * @param string $fieldId            The id of the field.
      *
@@ -491,7 +491,7 @@ class MultiColumnWizard extends Widget
     }
 
     /**
-     * Trigger the event men-at-work.multi-column-wizard-bundle.get-dca-picker-wizard
+     * Trigger the event contao-community-alliance.multi-column-wizard-bundle.get-dca-picker-wizard
      *
      * @param string $fieldId            The id of the field.
      *
@@ -893,7 +893,7 @@ class MultiColumnWizard extends Widget
                 }
 
                 // Contao changed the name for FileTree and PageTree widgets
-                // @see https://github.com/menatwork/contao-multicolumnwizard-bundle/issues/51
+                // @see https://github.com/contao-community-alliance/contao-multicolumnwizard-bundle/issues/51
                 $contaoVersion = VERSION . '.' . BUILD;
                 if ((
                         version_compare($contaoVersion, '4.4.41', '>=')
@@ -1391,7 +1391,9 @@ class MultiColumnWizard extends Widget
                         $arrHeaderItems[$arrField['eval']['columnPos']] = '<th></th>';
                     } else {
                         if ((true === $arrField['eval']['hideBody']) && (true === $arrField['eval']['hideHead'])) {
-                            $strHeaderItem = (array_key_exists($strKey, $arrHiddenHeader)) ? '<th class="hidden">' : '<th>';
+                            $strHeaderItem = (array_key_exists($strKey, $arrHiddenHeader))
+                                ? '<th class="hidden">'
+                                : '<th>';
                         } else {
                             $strHeaderItem = '<th>'
                                 . (array_key_exists($strKey, $arrHiddenHeader) ? '<div class="hidden">' : '');

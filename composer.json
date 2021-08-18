@@ -1,60 +1,59 @@
 {
-  "name": "menatwork/contao-multicolumnwizard-bundle",
+  "name": "contao-community-alliance/contao-multicolumnwizard-bundle",
   "type": "contao-bundle",
-  "description": "MultiColumWizard for Contao OpenSource CMS",
+  "description": "MultiColumnWizard for Contao OpenSource CMS",
   "keywords": [
     "contao",
     "widget",
     "wizard"
   ],
-  "homepage": "http://www.men-at-work.de",
+  "homepage": "https://c-c-a.org",
   "license": "LGPL-3.0-or-later",
   "authors": [
     {
       "name": "Stefan Heimes",
       "email": "stefan_heimes@hotmail.com",
-      "homepage": "http://www.men-at-work.de",
+      "homepage": "https://www.ContaoCommunityAlliance.de",
       "role": "Developer"
     },
     {
       "name": "Andreas Isaak",
-      "email": "contao@men-at-work.de",
-      "homepage": "http://www.men-at-work.de",
+      "email": "contao@ContaoCommunityAlliance.de",
+      "homepage": "https://www.ContaoCommunityAlliance.de",
       "role": "Developer"
     },
     {
       "name": "David Maack",
-      "email": "contao@men-at-work.de",
-      "homepage": "http://www.men-at-work.de",
+      "email": "contao@ContaoCommunityAlliance.de",
+      "homepage": "https://www.ContaoCommunityAlliance.de",
       "role": "Developer"
     },
     {
       "name": "Andreas Schempp",
       "email": "andreas.schempp@terminal42.ch",
-      "homepage": "http://www.terminal42.ch",
+      "homepage": "https://www.terminal42.ch",
       "role": "Developer"
     },
     {
       "name": "Yanick Witschi",
       "email": "yanick.witschi@terminal42.ch",
-      "homepage": "http://www.terminal42.ch",
+      "homepage": "https://www.terminal42.ch",
       "role": "Developer"
     },
     {
       "name": "Tristan Lins",
       "email": "tristan.lins@bit3.de",
-      "homepage": "http://bit3.de",
+      "homepage": "https://bit3.de",
       "role": "Developer"
     }
   ],
   "support": {
-    "issues": "https://github.com/menatwork/MultiColumnWizard/issues",
-    "wiki": "http://de.contaowiki.org/MultiColumnWizard",
-    "irc": "irc://irc.freenode.org/contao.dev",
-    "source": "https://github.com/menatwork/MultiColumnWizard"
+    "issues": "https://github.com/contao-community-alliance/contao-multicolumnwizard-bundle/issues",
+    "wiki": "https://de.contaowiki.org/MultiColumnWizard",
+    "source": "https://github.com/contao-community-alliance/contao-multicolumnwizard-bundle"
   },
   "require": {
-    "php": "^5.6 || ^7.0",
+    "php": "^7.0",
     "contao/core-bundle": "^4.4.8",
     "contao-community-alliance/translator": "^2.1"
   },
@@ -64,8 +63,8 @@
   },
   "autoload": {
     "psr-4": {
-      "MenAtWork\\MultiColumnWizardBundle\\": "src",
-      "MenAtWork\\MultiColumnWizard\\": "legacy_layer/psr-4-maw",
+      "ContaoCommunityAlliance\\MultiColumnWizardBundle\\": "src",
+      "ContaoCommunityAlliance\\MultiColumnWizard\\": "legacy_layer/psr-4-maw",
       "MultiColumnWizard\\": "legacy_layer/psr-4-mcw"
     },
     "classmap": [
@@ -77,7 +76,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "MenAtWork\\MultiColumnWizardBundle\\Test\\": "tests"
+      "ContaoCommunityAlliance\\MultiColumnWizardBundle\\Test\\": "tests"
     },
     "files": [
       "tests/contao3-autoloader.php"
@@ -85,10 +84,11 @@
   },
   "replace": {
     "contao-legacy/multicolumnwizard": "*",
-    "menatwork/contao-multicolumnwizard": ">=3.3.4 <4.0"
+    "menatwork/contao-multicolumnwizard": ">=3.3.4 <4.0",
+    "contao-community-alliance/contao-multicolumnwizard-bundle": ">=3.3.4 <4.0"
   },
   "extra": {
-    "contao-manager-plugin": "MenAtWork\\MultiColumnWizardBundle\\ContaoManager\\Plugin",
+    "contao-manager-plugin": "ContaoCommunityAlliance\\MultiColumnWizardBundle\\ContaoManager\\Plugin",
     "branch-alias": {
       "dev-master": "3.4.x-dev",
       "dev-develop": "3.5.x-dev",

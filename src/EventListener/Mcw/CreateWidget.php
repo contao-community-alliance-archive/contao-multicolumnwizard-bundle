@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of menatwork/contao-multicolumnwizard-bundle.
+ * This file is part of contao-community-alliance/contao-multicolumnwizard-bundle.
  *
  * (c) 2012-2021 MEN AT WORK.
  *
@@ -10,25 +10,26 @@
  *
  * This project is provided in good faith and hope to be usable by anyone.
  *
- * @package    menatwork/contao-multicolumnwizard-bundle
+ * @package    contao-community-alliance/contao-multicolumnwizard-bundle
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
  * @author     Stefan Heimes <stefan_heimes@hotmail.com>
  * @author     Richard Henkenjohann <richardhenkenjohann@googlemail.com>
+ * @author     Ingolf Steinhardt <info@e-spin.de>
  * @copyright  2011 Andreas Schempp
  * @copyright  2011 certo web & design GmbH
  * @copyright  2013-2021 MEN AT WORK
- * @license    https://github.com/menatwork/contao-multicolumnwizard-bundle/blob/master/LICENSE LGPL-3.0-or-later
+ * @license    https://spdx.org/licenses/LGPL-3.0-or-later.html LGPL-3.0-or-later
  * @filesource
  */
 
-namespace MenAtWork\MultiColumnWizardBundle\EventListener\Mcw;
+namespace ContaoCommunityAlliance\MultiColumnWizardBundle\EventListener\Mcw;
 
 use Contao\Input;
 use Contao\System;
 use ContaoCommunityAlliance\DcGeneral\Contao\Compatibility\DcCompat;
 use ContaoCommunityAlliance\DcGeneral\Contao\View\Contao2BackendView\ContaoWidgetManager;
-use MenAtWork\MultiColumnWizardBundle\Contao\Widgets\MultiColumnWizard;
-use MenAtWork\MultiColumnWizardBundle\Event\CreateWidgetEvent;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\Contao\Widgets\MultiColumnWizard;
+use ContaoCommunityAlliance\MultiColumnWizardBundle\Event\CreateWidgetEvent;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 /**
